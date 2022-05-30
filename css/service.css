@@ -1,0 +1,311 @@
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
+}
+
+.wrapper {
+  padding: 85px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  transition:0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  display: block;
+  width: 160px;
+  padding: 14px 70px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(204, 39, 39);
+}
+
+/* header */
+header a {
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-ttl {
+  font-size: 24px;
+  width: 80px;
+}
+
+.header-nav-list {
+  display: flex;
+  font-weight: bold;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.drawer-nav {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .drawer-nav-list {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .drawer-nav-item {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .drawer-nav-list a {
+    color: blue;
+  }
+
+  .drawer-nav {
+    position: absolute;
+    display: block;
+    background: #fff;
+    transition: .7s;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+  }
+
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__line--top,
+  .menu__line--middle,
+  .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .menu__line--top {
+    top: 0;
+  }
+  .menu__line--middle {
+    top: 14px;
+  }
+  .menu__line--bottom {
+    bottom: 0;
+  }
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .in{
+    transform: translateX(100%);
+  }
+}
+
+/* top */
+.service-top {
+  background-image: url(../img/mv.png);
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.top-ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* contents */
+.service-contents-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.service-contents-list-img {
+  width: 290px;
+}
+
+.service-contents-list-img img {
+  width: 100%;
+}
+
+.service-contents-text {
+  margin: 10px 0 0 40px;
+  width: 60%;
+}
+
+.service-contents-ttl {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.service-contents-list p {
+  line-height: 30px;
+}
+
+.service-contents li:first-child {
+  border-top:1px solid;
+  border-bottom:1px solid;
+}
+
+.service-contents li + li {
+  border-bottom:1px solid;
+}
+
+@media screen and (max-width: 768px) {
+  .service-contents-list-img {
+    width: 100%;
+  }
+
+  .service-contents-text {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* contact */
+.contact {
+  text-align: center;
+  background-color: rgb(245, 246, 249);
+}
+
+.contact-btn {
+  margin: auto;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 35px;
+}
+
+/* footer */
+footer {
+  max-width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer-inner {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+.footer-nav ul {
+  margin: 0 auto;
+}
+
+.footer-nav-list li {
+  padding-left: 12px;
+}
+
+.footer-nav-list li + li {
+  border-left: 1px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    width: 60%;
+  }
+
+  .footer-nav-item {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .copyright {
+    margin: 0 auto;
+  }
+
+  .footer-nav-list li + li {
+    border: none;
+  }
+}

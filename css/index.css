@@ -1,0 +1,455 @@
+/* common */
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
+}
+
+html {
+  overflow: overlay; }
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+}
+
+.wrapper {
+  padding: 85px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 25px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  transition:0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* header */
+header a {
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-ttl {
+  font-size: 24px;
+  width: 80px;
+}
+
+.header-nav-list {
+  display: flex;
+  font-weight: bold;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.drawer-nav {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .drawer-nav-list {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .drawer-nav-item {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .drawer-nav-list a {
+    color: blue;
+  }
+
+  .drawer-nav {
+    position: absolute;
+    display: block;
+    background: #fff;
+    transition: .7s;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+  }
+
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__line--top,
+  .menu__line--middle,
+  .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .menu__line--top {
+    top: 0;
+  }
+  .menu__line--middle {
+    top: 14px;
+  }
+  .menu__line--bottom {
+    bottom: 0;
+  }
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .in{
+    transform: translateX(100%);
+  }
+}
+
+/* top */
+.top {
+  height: 80vh;
+  background-image: url(../img/mv.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-text {
+  margin: 0 auto;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.top-text-main {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.top-text-sub {
+  font-size: 18px;
+}
+
+/* about */
+.about {
+  background-color: #000;
+  color: #fff;
+}
+
+/* service */
+.service-wrapper h2 {
+  text-align: center;
+}
+
+.top-service-contents {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.service-contents-item {
+  width: 49%;
+  margin-right: calc(100% - (49% * 2));
+}
+
+.service-contents-item:nth-child(2n){
+  margin-right:0;
+  }
+
+.service-contents-item-img img {
+  width: 100%;
+  height: auto;
+}
+
+.service-contents-item h3 {
+  line-height: 25px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.service-contents-item p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: block;
+  width: 160px;
+  padding: 14px 70px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(204, 39, 39);
+}
+
+.service-btn {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .service-contents-item {
+    width: 100%;
+  }
+}
+
+/* news */
+.news {
+  background-color: #000;
+  color: #fff;
+}
+
+.news-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.news-btn {
+  padding: 13px 5px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.news-list a {
+  display: block;
+  font-size: 18px;
+  padding: 8px;
+  max-width: 100%;
+  background-color:#fff;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 24px;
+}
+
+.news-list strong {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-btn {
+    padding: 12px 3px;
+  }
+
+  .news-list a {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+}
+
+/* blog */
+.blog-wrapper h2 {
+  text-align: center;
+}
+
+.blog-contents {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.blog-contents-item {
+  width: 32%;
+  margin-right: calc(100% - (33% * 3));
+}
+
+.blog-contents-item:nth-child(3n){
+  margin-right:0;
+  }
+
+.blog-contents-item-img img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-contents-item a {
+  line-height: 25px;
+  font-size: 18px;
+  color: #000;
+}
+
+.blog-contents-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.blog-btn {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-contents-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* unit */
+.unit {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.unit-item {
+  width: 100%;
+}
+
+.unit-item a {
+  max-width: 100%;
+  padding: 110px 0;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.company {
+  background-color: rgb(209, 19, 19);
+}
+
+.recruit {
+  background-color: #000;
+}
+
+/* contact */
+.contact {
+  text-align: center;
+  background-color: rgb(245, 246, 249);
+}
+
+.contact-btn {
+  margin: auto;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 35px;
+}
+
+/* footer */
+footer {
+  max-width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer-inner {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+.footer-nav ul {
+  margin: 0 auto;
+}
+
+.footer-nav-list li {
+  padding-left: 12px;
+}
+
+.footer-nav-list li + li {
+  border-left: 1px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    width: 60%;
+  }
+
+  .footer-nav-item {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .copyright {
+    margin: 0 auto;
+  }
+
+  .footer-nav-list li + li {
+    border: none;
+  }
+}
